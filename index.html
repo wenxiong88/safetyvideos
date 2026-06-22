@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety Reminder</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-title">
+    <span class="icon">&#9888;&#65039;</span>
+    <span>Safety Reminder</span>
+  </div>
+  <div class="search-bar">
+    <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" placeholder="Search safety videos..." id="searchInput">
+  </div>
+  <!-- hidden: upload button (to be enabled later)
+  <button class="btn-upload-header" id="btnUploadHeader" aria-label="Upload video">
+    <span>Upload</span>
+  </button> -->
+</header>
+
+<!-- Side Navigation (desktop) -->
+<nav class="side-nav">
+  <a href="#" class="active" data-nav="home">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home Feed
+  </a>
+  <!-- hidden: to be enabled later
+  <a href="#" data-nav="upload" id="sideNavUpload">
+    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    Upload Video
+  </a>
+  <a href="#" data-nav="profile">
+    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    Profile
+  </a>
+  <a href="#" data-nav="settings">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    Settings
+  </a>
+  -->
+</nav>
+
+<!-- Bottom Navigation (mobile/tablet) — only Home visible for now -->
+<nav class="bottom-nav">
+  <a href="#" class="active" data-nav="home">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+</nav>
+
+<!-- Main Feed -->
+<main class="main">
+  <div class="feed" id="feed"></div>
+</main>
+
+<!-- Upload Modal (hidden: to be enabled later) -->
+<div class="modal-overlay" id="uploadModal" style="display:none!important">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Upload Safety Video</h2>
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="uploadForm">
+        <div class="form-group">
+          <label>Video File</label>
+          <div class="file-upload-area" id="fileUploadArea">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p>Click to select a video file</p>
+            <div class="file-name" id="fileName"></div>
+          </div>
+          <input type="file" id="fileInput" accept="video/*" style="display:none">
+        </div>
+        <div class="form-group">
+          <label for="videoTitle">Title</label>
+          <input type="text" id="videoTitle" placeholder="Enter video title" required>
+        </div>
+        <div class="form-group">
+          <label for="videoDesc">Description</label>
+          <textarea id="videoDesc" placeholder="Describe the safety topic covered..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="videoCat">Category</label>
+          <select id="videoCat" required>
+            <option value="">Select a category</option>
+            <option value="confined">Confined Space</option>
+            <option value="ppe">PPE</option>
+            <option value="gas">Gas Safety</option>
+            <option value="electrical">Electrical</option>
+            <option value="excavation">Excavation</option>
+            <option value="lifting">Lifting</option>
+            <option value="general">General Safety</option>
+            <option value="hazard">Hazard Zone</option>
+            <option value="solar">Solar</option>
+            <option value="wah">Work at Height</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Upload Video</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Scripts -->
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
