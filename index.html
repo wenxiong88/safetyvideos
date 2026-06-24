@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafetyFeed</title>
+<title>SafetyFeed (TBC)</title>
 <link rel="stylesheet" href="styles.css">
-<script>if(localStorage.getItem('safetyReminder_theme')!=='light')document.documentElement.classList.add('dark-theme');</script>
+<script>if(localStorage.getItem('safetyFeed_theme')!=='light')document.documentElement.classList.add('dark-theme');</script>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 <header class="header">
   <div class="header-title">
     <svg class="logo-icon" viewBox="0 0 28 28" fill="none"><defs><linearGradient id="logoGr" x1="4" y1="2" x2="24" y2="27"><stop stop-color="#A99BFF"/><stop offset="1" stop-color="#4FD1FF"/></linearGradient></defs><path d="M14 2L4 6.5V13C4 19.35 8.28 25.22 14 27C19.72 25.22 24 19.35 24 13V6.5L14 2Z" fill="rgba(169,155,255,0.15)" stroke="url(#logoGr)" stroke-width="1.5" stroke-linejoin="round"/><polyline points="8,15 11,15 12.5,10.5 14,19.5 15.5,12.5 17,15 20,15" fill="none" stroke="url(#logoGr)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <span>SafetyFeed</span>
+    <span>SafetyFeed (TBC)</span>
   </div>
   <div class="search-bar">
     <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -31,9 +31,13 @@
     <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     Home
   </a>
-  <a href="#" data-nav="discover">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-    Discover
+  <a href="#" data-nav="share">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </a>
+  <a href="#" data-nav="play">
+    <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="17" cy="11" r="1"/><circle cx="15" cy="13" r="1"/></svg>
+    Play
   </a>
   <a href="#" data-nav="learn">
     <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -47,9 +51,13 @@
     <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     Home
   </a>
-  <a href="#" data-nav="discover">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-    Discover
+  <a href="#" data-nav="share">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </a>
+  <a href="#" data-nav="play">
+    <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="17" cy="11" r="1"/><circle cx="15" cy="13" r="1"/></svg>
+    Play
   </a>
   <a href="#" data-nav="learn">
     <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -206,8 +214,8 @@
 
 </main>
 
-<!-- Discover Page -->
-<main class="main page-section" id="page-discover" style="display:none">
+<!-- Share Page (formerly Discover) -->
+<main class="main page-section" id="page-share" style="display:none">
   <!-- Trending Topics -->
   <div class="trending-bar" id="trendingBar">
     <button class="trending-chip active" data-filter="all">All</button>
@@ -238,8 +246,21 @@
       </button>
     </div>
   </div>
-  <!-- Discover Feed -->
-  <div class="feed" id="discover-feed"></div>
+  <!-- Share Feed -->
+  <div class="feed" id="share-feed"></div>
+</main>
+
+<!-- Play Page (safety mini-games) -->
+<main class="main page-section" id="page-play" style="display:none">
+  <div class="page-banner play-banner">
+    <div class="banner-content">
+      <h2>Safety Drills</h2>
+      <p>3D interactive LOTO &amp; de-LOTO training</p>
+    </div>
+  </div>
+  <div class="play-container" id="play-container">
+    <!-- Game selection grid rendered by JS -->
+  </div>
 </main>
 
 <!-- Learn Page (safety videos) -->

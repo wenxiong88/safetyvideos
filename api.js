@@ -1,5 +1,5 @@
 /**
- * Safety Reminder — API Service Layer
+ * SafetyFeed (TBC) — API Service Layer
  *
  * Set ApiService.BASE_URL to your backend endpoint to switch from mock data to real API.
  * Example: ApiService.BASE_URL = 'https://your-api.azurewebsites.net/api';
@@ -374,6 +374,84 @@ const ApiService = (() => {
         <circle cx="96" cy="150" r="10" fill="#E53935" stroke="#fff" stroke-width="1.5"/>
       </g>
       <text x="200" y="210" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="14" font-weight="600">STAY HYDRATED</text>
+    `),
+    fall_protect_vid: svg('#1565C0','#0D47A1', `
+      <g opacity="0.9">
+        <rect x="80" y="50" width="6" height="150" fill="#FFB74D"/>
+        <rect x="240" y="50" width="6" height="150" fill="#FFB74D"/>
+        <rect x="80" y="80" width="166" height="4" fill="#FFA726"/>
+        <rect x="80" y="130" width="166" height="4" fill="#FFA726"/>
+        <line x1="86" y1="80" x2="240" y2="130" stroke="#FFD54F" stroke-width="1.5"/>
+        <line x1="240" y1="80" x2="86" y2="130" stroke="#FFD54F" stroke-width="1.5"/>
+        <circle cx="160" cy="95" r="10" fill="rgba(255,255,255,0.8)"/>
+        <line x1="160" y1="105" x2="160" y2="128" stroke="rgba(255,255,255,0.8)" stroke-width="2.5"/>
+        <line x1="160" y1="112" x2="148" y2="122" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+        <line x1="160" y1="112" x2="172" y2="122" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+        <line x1="160" y1="100" x2="130" y2="78" stroke="#43A047" stroke-width="2" stroke-dasharray="3,2"/>
+        <circle cx="320" cy="160" r="18" fill="#43A047"/>
+        <polyline points="311,160 317,166 329,154" fill="none" stroke="#fff" stroke-width="2.5"/>
+      </g>
+      <text x="200" y="210" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="14" font-weight="600">FALL PROTECTION TRAINING</text>
+    `),
+    fire_extinguisher_vid: svg('#BF360C','#E65100', `
+      <g opacity="0.9">
+        <rect x="80" y="55" width="50" height="120" rx="6" fill="#E53935" stroke="#fff" stroke-width="2"/>
+        <rect x="92" y="42" width="26" height="18" rx="3" fill="#B71C1C" stroke="#fff" stroke-width="1.5"/>
+        <path d="M105 42 L105 30 Q112 22 120 30" stroke="#fff" stroke-width="2" fill="none"/>
+        <text x="105" y="95" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ABC</text>
+        <rect x="165" y="55" width="50" height="120" rx="6" fill="#1565C0" stroke="#fff" stroke-width="2"/>
+        <rect x="177" y="42" width="26" height="18" rx="3" fill="#0D47A1" stroke="#fff" stroke-width="1.5"/>
+        <path d="M190 42 L190 30 Q197 22 205 30" stroke="#fff" stroke-width="2" fill="none"/>
+        <text x="190" y="95" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">CO2</text>
+        <rect x="250" y="55" width="50" height="120" rx="6" fill="#43A047" stroke="#fff" stroke-width="2"/>
+        <rect x="262" y="42" width="26" height="18" rx="3" fill="#2E7D32" stroke="#fff" stroke-width="1.5"/>
+        <path d="M275 42 L275 30 Q282 22 290 30" stroke="#fff" stroke-width="2" fill="none"/>
+        <text x="275" y="95" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">H2O</text>
+      </g>
+      <text x="200" y="205" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="13" font-weight="600">FIRE EXTINGUISHER TYPES</text>
+    `),
+    loto_demo_vid: svg('#F57F17','#FDD835', `
+      <g opacity="0.9">
+        <rect x="140" y="40" width="120" height="120" rx="5" fill="#546E7A" stroke="#fff" stroke-width="2"/>
+        <rect x="155" y="55" width="90" height="20" rx="3" fill="#E53935"/>
+        <text x="200" y="69" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">DANGER HV</text>
+        <rect x="160" y="85" width="25" height="12" rx="2" fill="#333"/>
+        <rect x="195" y="85" width="25" height="12" rx="2" fill="#333"/>
+        <rect x="160" y="105" width="25" height="12" rx="2" fill="#E53935"/>
+        <rect x="195" y="105" width="25" height="12" rx="2" fill="#333"/>
+        <rect x="175" y="128" width="50" height="22" rx="4" fill="#FFD54F" stroke="#E65100" stroke-width="2"/>
+        <rect x="182" y="121" width="12" height="10" rx="6" fill="none" stroke="#E65100" stroke-width="2.5"/>
+        <text x="200" y="144" text-anchor="middle" fill="#E65100" font-size="7" font-weight="bold">LOCKED</text>
+        <rect x="75" y="100" width="50" height="65" rx="3" fill="#fff" stroke="#E53935" stroke-width="2"/>
+        <text x="100" y="118" text-anchor="middle" fill="#E53935" font-size="8" font-weight="bold">DANGER</text>
+        <text x="100" y="130" text-anchor="middle" fill="#333" font-size="6">DO NOT</text>
+        <text x="100" y="140" text-anchor="middle" fill="#333" font-size="6">OPERATE</text>
+        <text x="100" y="155" text-anchor="middle" fill="#333" font-size="5">J. Mitchell</text>
+      </g>
+      <text x="200" y="205" text-anchor="middle" fill="rgba(0,0,0,0.6)" font-family="sans-serif" font-size="14" font-weight="600">LOTO PROCEDURE DEMO</text>
+    `),
+    emergency_drill_vid: svg('#2E7D32','#4CAF50', `
+      <g opacity="0.9">
+        <rect x="280" y="30" width="80" height="140" rx="3" fill="#5D4037" stroke="#fff" stroke-width="1.5"/>
+        <rect x="290" y="40" width="28" height="55" rx="2" fill="#8D6E63"/>
+        <rect x="322" y="40" width="28" height="55" rx="2" fill="#8D6E63"/>
+        <rect x="290" y="100" width="60" height="8" rx="2" fill="#FF8F00"/>
+        <rect x="295" y="110" width="50" height="20" rx="3" fill="#43A047"/>
+        <text x="320" y="124" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">EXIT</text>
+        <circle cx="100" cy="105" r="10" fill="#FFD54F"/>
+        <line x1="100" y1="115" x2="100" y2="145" stroke="#FFD54F" stroke-width="2.5"/>
+        <line x1="100" y1="122" x2="88" y2="132" stroke="#FFD54F" stroke-width="2"/>
+        <line x1="100" y1="122" x2="112" y2="132" stroke="#FFD54F" stroke-width="2"/>
+        <line x1="100" y1="145" x2="90" y2="165" stroke="#FFD54F" stroke-width="2"/>
+        <line x1="100" y1="145" x2="110" y2="165" stroke="#FFD54F" stroke-width="2"/>
+        <circle cx="160" cy="100" r="10" fill="#FFD54F" opacity="0.7"/>
+        <line x1="160" y1="110" x2="160" y2="140" stroke="#FFD54F" stroke-width="2.5" opacity="0.7"/>
+        <circle cx="210" cy="108" r="10" fill="#FFD54F" opacity="0.5"/>
+        <line x1="210" y1="118" x2="210" y2="148" stroke="#FFD54F" stroke-width="2.5" opacity="0.5"/>
+        <path d="M120,130 Q180,125 260,120" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+        <polygon points="260,116 270,120 260,124" fill="#fff" opacity="0.6"/>
+      </g>
+      <text x="200" y="205" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="13" font-weight="600">EMERGENCY EVACUATION DRILL</text>
     `)
   };
 
@@ -400,11 +478,13 @@ const ApiService = (() => {
     {
       id: 'd1',
       author: 'James Mitchell',
-      text: 'Visited a construction site in Melbourne today. Absolutely spotless! Every tool in its place, walkways clear, waste sorted into colour-coded bins. Even the temporary hoarding had artwork from local schools on it. This is the standard we should all aspire to. Australia really sets the bar for site housekeeping.',
+      text: 'Visited a construction site in Melbourne today and filmed a walkthrough. Absolutely spotless! Every tool in its place, walkways clear, waste sorted into colour-coded bins. Even the temporary hoarding had artwork from local schools on it. This is the standard we should all aspire to. Australia really sets the bar for site housekeeping.',
       tag: 'goodpractice',
-      hasVideo: false,
+      hasVideo: true,
       thumbnail: SCENE_THUMBNAILS.aus_site,
-      hasImage: true,
+      hasImage: false,
+      videoTitle: 'Melbourne Site Walkthrough — World-Class Housekeeping',
+      duration: '2:34',
       timestamp: '2026-06-23T08:30:00',
       defaultLikes: 234,
       defaultComments: [
@@ -523,6 +603,77 @@ const ApiService = (() => {
         { author: 'Aisha Johnson', text: 'Safety has no hierarchy - love that. Adding it to our safety charter.', time: '3d ago' },
         { author: 'Tom H.', text: '10 seconds of awkwardness vs a lifetime of regret. That\'s a quote right there.', time: '3d ago' }
       ]
+    },
+    {
+      id: 'dv1',
+      author: 'Linda Chen',
+      text: 'Just finished this training video on fall protection for our Work At Height teams. Covers harness inspection, anchor point selection, and rescue planning. Please share with your crews \u2014 every worker at height needs to see this before the shift starts. Prevention is always better than rescue.',
+      tag: 'tip',
+      hasVideo: true,
+      hasImage: false,
+      thumbnail: SCENE_THUMBNAILS.fall_protect_vid,
+      videoTitle: 'Fall Protection Essentials',
+      duration: '5:42',
+      timestamp: '2026-06-22T19:00:00',
+      defaultLikes: 198,
+      defaultComments: [
+        { author: 'Steve C.', text: 'The harness inspection section is brilliant. Sharing with all our riggers.', time: '5h ago' },
+        { author: 'Carlos Rivera', text: 'This should be mandatory viewing before any WAH permit is signed.', time: '3h ago' },
+        { author: 'Tom H.', text: 'Great production quality. Well done Linda!', time: '2h ago' }
+      ]
+    },
+    {
+      id: 'dv2',
+      author: 'Raj Kumar',
+      text: 'Recorded a quick explainer on fire extinguisher types. Too many people grab the nearest extinguisher without checking if it\'s the right one for the fire class. Using a water extinguisher on an electrical fire can be fatal. Know your ABCs \u2014 it takes 3 minutes to learn and could save a life.',
+      tag: 'tip',
+      hasVideo: true,
+      hasImage: false,
+      thumbnail: SCENE_THUMBNAILS.fire_extinguisher_vid,
+      videoTitle: 'Know Your Fire Extinguishers',
+      duration: '3:18',
+      timestamp: '2026-06-21T12:00:00',
+      defaultLikes: 167,
+      defaultComments: [
+        { author: 'Aisha Johnson', text: 'Added this to our induction pack immediately. So important!', time: '1d ago' },
+        { author: 'Helen W.', text: 'The colour coding chart at the end is really handy. Printed it for our break room.', time: '20h ago' }
+      ]
+    },
+    {
+      id: 'dv3',
+      author: 'Ahmad Razak',
+      text: 'Here\'s the full LOTO procedure demonstration we filmed at Site C last week. Shows every step from notification through to zero energy verification. Pay attention to the tag-out section \u2014 our audit found 40% of tags were incorrectly filled out. Let\'s get this right, team.',
+      tag: 'goodpractice',
+      hasVideo: true,
+      hasImage: false,
+      thumbnail: SCENE_THUMBNAILS.loto_demo_vid,
+      videoTitle: 'LOTO Procedure \u2014 Step by Step',
+      duration: '7:15',
+      timestamp: '2026-06-20T15:30:00',
+      defaultLikes: 221,
+      defaultComments: [
+        { author: 'Jenny L.', text: 'The tag-out close-up section is exactly what our team needed. Crystal clear.', time: '2d ago' },
+        { author: 'Mark S.', text: 'Played this at our toolbox talk today. Everyone found it really useful.', time: '2d ago' },
+        { author: 'Dave R.', text: 'Please do one for de-isolation too. That\'s where we see the most mistakes.', time: '1d ago' }
+      ]
+    },
+    {
+      id: 'dv4',
+      author: 'Priya Nair',
+      text: 'Video from our emergency evacuation drill last Friday. 312 workers evacuated in 4 minutes 23 seconds \u2014 a 30-second improvement from last quarter! Watch the video to see the muster point procedures and head count process. Special thanks to the fire wardens for their excellent coordination.',
+      tag: 'goodpractice',
+      hasVideo: true,
+      hasImage: false,
+      thumbnail: SCENE_THUMBNAILS.emergency_drill_vid,
+      videoTitle: 'Emergency Evacuation Drill',
+      duration: '4:51',
+      timestamp: '2026-06-19T10:00:00',
+      defaultLikes: 189,
+      defaultComments: [
+        { author: 'Dan K.', text: '4 minutes 23 seconds is impressive for 312 people! Well organised.', time: '3d ago' },
+        { author: 'Nina R.', text: 'The muster point procedures look very smooth. Can we adopt this for our site?', time: '3d ago' },
+        { author: 'Pat O.', text: 'Our fire wardens deserve a round of applause. This was seamless.', time: '2d ago' }
+      ]
     }
   ];
 
@@ -610,7 +761,7 @@ const ApiService = (() => {
 
     async getDiscoverPosts() {
       if (BASE_URL) return apiGet('/discover');
-      return MOCK_DISCOVER_POSTS.map(p => ({ ...p }));
+      return MOCK_DISCOVER_POSTS.map(p => ({ ...p })).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     },
 
     async createDiscoverPost(data) {
